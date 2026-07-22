@@ -7,7 +7,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-Alpine-009639?style=for-the-badge&logo=nginx&logoColor=white)
 
-Un portfolio de développeur Single Page Application (SPA) moderne, réactif et hautement optimisé, conçu avec **React**, **TypeScript**, **Tailwind CSS** et **Framer Motion**, puis conteneurisé de manière industrielle avec **Docker (Multi-Stage Build)** et **Nginx**.
+Mon portfolio de développeur en Single Page Application (SPA) moderne, réactif et hautement optimisé, conçu avec **React**, **TypeScript**, **Tailwind CSS** et **Framer Motion**, puis conteneurisé de manière industrielle avec **Docker (Multi-Stage Build)** et **Nginx**.
 
 ---
 
