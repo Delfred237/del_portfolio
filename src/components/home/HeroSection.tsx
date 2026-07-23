@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../MotionContainers";
 import profileImg from "../../assets/images/del.webp";
+import delfredCV from "../../assets/files/Delfred_CV.pdf";
 
 // const PROFILE_IMAGE_URL = "src/assets/images/del.webp";
 // "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop";
@@ -85,7 +86,7 @@ const HeroSection = () => {
             download="Delfred_CV.pdf"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="/src/assets/files/Delfred_CV.pdf"
+            href={delfredCV}
             className="inline-flex items-center gap-1.5 px-3 py-2.5 text-xs text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors ml-auto sm:ml-0 font-medium cursor-pointer"
           >
             <FileText className="w-4 h-4" />
