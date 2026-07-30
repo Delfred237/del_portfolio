@@ -43,3 +43,7 @@ coverage/
 .cache/
 .eslintcache
 .vite/
+
+# environnement
+.env
+.env*
