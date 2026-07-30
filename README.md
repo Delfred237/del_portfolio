@@ -18,6 +18,7 @@ Mon portfolio de développeur en Single Page Application (SPA) moderne, réactif
 - **Architecture Composants Propre :** Séparation stricte de la logique, des données statiques et des composants de vue.
 - **Support Multi-Projets & Blog :** Systèmes de cartes interactives avec filtrage dynamique (`layout animations`).
 - **Production-Ready & Conteneurisé :** Optimisé pour un déploiement continu grâce à un build Docker multi-étapes léger basant son runtime sur Alpine Linux.
+- **EmailJs :** envoie d'email configuré qvec le service d'envoie de mail EmailJs.
 
 ---
 

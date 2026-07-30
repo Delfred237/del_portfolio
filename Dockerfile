@@ -9,6 +9,16 @@ FROM node:${node_version} AS build
 # Set the working directory inside the container
 WORKDIR /app
 
+# Déclaration des arguments de build pour EmailJS
+ARG VITE_EMAILJS_SERVICE_ID
+ARG VITE_EMAILJS_TEMPLATE_ID
+ARG VITE_EMAILJS_PUBLIC_KEY
+
+# Passage des ARGs en variables d'environnement pour que Vite les voie pendant npm run build
+ENV VITE_EMAILJS_SERVICE_ID=$VITE_EMAILJS_SERVICE_ID
+ENV VITE_EMAILJS_TEMPLATE_ID=$VITE_EMAILJS_TEMPLATE_ID
+ENV VITE_EMAILJS_PUBLIC_KEY=$VITE_EMAILJS_PUBLIC_KEY
+
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 

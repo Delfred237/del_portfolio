@@ -1,26 +1,54 @@
 import { GithubIcon, LinkedinIcon } from "@/utils/SocialMediaIcons";
-import { CheckCircle2, Mail, MapPin, MessageSquare, Send } from "lucide-react";
-import { useState } from "react";
+import {
+  AlertCircle,
+  CheckCircle2,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Send,
+} from "lucide-react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import { fadeInUp, staggerContainer } from "@/components/MotionContainers";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Fonction pour simuler l'envoi du formulaire
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Fonction pour gerer l'envoi du formulaire
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault();
+    if (!formRef.current) return;
+
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     // Simuler le temps de traitement du formulaire
-    setTimeout(() => {
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      );
+
       setIsSubmitting(false);
       setIsSubmitted(true);
+      formRef.current.reset(); // Réinitialiser le formulaire après succès
 
-      // Réinitialiser le message de succès après 5 secondes
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 3000);
+      // Réinitialiser le message de succès après 6 secondes
+      setTimeout(() => setIsSubmitted(false), 6000);
+    } catch (error) {
+      console.error("Erreur lors de l'envoi EmailJS :", error);
+      setIsSubmitting(false);
+      setErrorMessage(
+        "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+      );
+    }
   };
 
   return (
@@ -134,6 +162,7 @@ const Contact = () => {
           className="lg:col-span-3"
         >
           <form
+            ref={formRef}
             onSubmit={handleSubmit}
             className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 shadow-2xs space-y-6"
           >
@@ -148,6 +177,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="user_name"
                   required
                   placeholder="John Doe"
                   className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition-all text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400"
@@ -163,6 +193,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="user_email"
                   required
                   placeholder="john@example.com"
                   className="w-full px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition-all text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400"
@@ -179,12 +210,20 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 required
                 rows={5}
                 placeholder="Parlez-moi de votre projet..."
                 className="w-full resize-none px-4 py-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 outline-none transition-all text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 min-h-30"
               ></textarea>
             </div>
+
+            {errorMessage && (
+              <div className="flex items-center gap-2 p-3.5 rounded-xl bg-red-500/10 border border-red-500/20 text-red-600 dark:text-red-400 text-xs">
+                <AlertCircle className="w-4 h-4 shrink-0" />
+                <span>{errorMessage}</span>
+              </div>
+            )}
 
             <button
               type="submit"
