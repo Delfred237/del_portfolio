@@ -75,66 +75,77 @@ export const SKILLS: TechSkill[] = [
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
   {
-    id: "1",
-    title: "DelFlow - Vehicle Rental Marketplace",
+    id: "docuflow",
+    title: "DocuFlow",
     description:
-      "Plateforme SaaS de mise en relation entre agences de location de véhicules et clients avec système de réservation, gestion des agences et architecture métier évolutive.",
-    tags: ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT", "REST API"],
-    metrics: "Projet SaaS Full Stack",
+      "Application Full Stack de gestion documentaire et de processus métier avec authentification, RBAC, gestion de fichiers, notifications et API REST documentée.",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker",
+      "CI/CD",
+    ],
+    metrics: "Full Stack · RBAC · CI/CD",
     link: "/projects",
   },
+
   {
-    id: "2",
+    id: "nexustask",
+    title: "NexusTask",
+    description:
+      "Plateforme de gestion de tâches reposant sur une API Spring Boot consommée par une application React et une application Flutter partageant le même contrat d'API.",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "Flutter",
+      "PostgreSQL",
+    ],
+    metrics: "1 API · 2 clients · Web + Mobile",
+    link: "/projects",
+  },
+
+  {
+    id: "taskforge",
+    title: "TaskForge",
+    description:
+      "Application Java native dédiée au traitement asynchrone de tâches avec concurrence, worker pools, réseau, retry, timeout et observabilité.",
+    tags: ["Java", "Concurrency", "Networking", "Worker Pools", "Docker"],
+    metrics: "Java natif · Concurrency · Async",
+    link: "/projects",
+  },
+
+  {
+    id: "finledger",
+    title: "Finledger",
+    description:
+      "Application Java native de gestion budgétaire développée avec Java 21, Maven et JUnit 5, avec conteneurisation et automatisation CI.",
+    tags: ["Java 21", "Maven", "JUnit 5", "Docker", "GitHub Actions"],
+    metrics: "Java 21 · Tests · CI/CD",
+    link: "/projects",
+  },
+
+  {
+    id: "delflow",
+    title: "DelFlow",
+    description:
+      "Plateforme SaaS de location de véhicules permettant aux agences de gérer leurs véhicules, réservations et opérations métier.",
+    tags: ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT", "REST API"],
+    metrics: "SaaS · REST API · Spring Boot",
+    link: "/projects",
+  },
+
+  {
+    id: "budgetflow",
     title: "BudgetFlow",
     description:
-      "Application mobile de gestion des finances personnelles permettant de suivre les dépenses, tâches, notes et livres avec stockage local et architecture propre.",
+      "Application mobile de gestion des finances personnelles avec stockage local, gestion d'état et architecture orientée séparation des responsabilités.",
     tags: ["Flutter", "Riverpod", "Drift", "SQLite", "Material 3"],
-    metrics: "Architecture Clean",
-    link: "/projects",
-  },
-  {
-    id: "3",
-    title: "Django Blog",
-    description:
-      "Application de blog développée avec Django intégrant authentification, gestion d'articles, commentaires, pagination et profils utilisateurs.",
-    tags: ["Python", "Django", "SQLite", "Bootstrap"],
-    metrics: "CRUD complet",
-    link: "/projects",
-  },
-  {
-    id: "4",
-    title: "Portfolio Developer",
-    description:
-      "Portfolio personnel moderne conçu pour présenter mes compétences, projets et parcours avec un design orienté développeur et une expérience utilisateur soignée.",
-    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    metrics: "Personal Branding",
-    link: "/projects",
-  },
-  {
-    id: "5",
-    title: "QuoteFlow",
-    description:
-      "Application Django permettant de générer automatiquement des estimations commerciales, des PDF et le suivi des demandes clients.",
-    tags: ["Python", "Django", "PostgreSQL", "Bootstrap"],
-    metrics: "Workflow métier",
-    link: "/projects",
-  },
-  {
-    id: "6",
-    title: "TaskFlow",
-    description:
-      "Application de gestion de tâches développée en JavaScript Vanilla avec architecture modulaire, Kanban, Drag & Drop et sauvegarde locale.",
-    tags: ["JavaScript", "HTML5", "CSS3", "ES Modules", "Local Storage"],
-    metrics: "JavaScript Vanilla",
-    link: "/projects",
-  },
-  {
-    id: "7",
-    title: "Chartereds UK",
-    description:
-      "Site web professionnel développé pour une entreprise britannique avec une interface moderne, responsive et une expérience utilisateur optimisée.",
-    tags: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "Responsive Design"],
-    metrics: "Projet client réel",
+    metrics: "Mobile · Offline-first · Clean Architecture",
     link: "/projects",
   },
 ];

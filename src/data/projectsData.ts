@@ -37,8 +37,8 @@ export const PROJECTS: CaseStudy[] = [
   // ============================================================
 
   {
-    id: "docuflow",
-    title: "DocuFlow",
+    id: "docusphere",
+    title: "DocuSphere",
     tagline:
       "Plateforme Full Stack de gestion documentaire pour les organisations",
     category: "Fullstack",
@@ -79,7 +79,7 @@ export const PROJECTS: CaseStudy[] = [
       "Architecture backend en couches avec séparation Controller, Service et Repository, DTO pour les échanges API, validation, gestion centralisée des exceptions et persistance avec JPA/Hibernate. Frontend React structuré autour de composants réutilisables et d'un système de design cohérent.",
 
     links: {
-      github: "",
+      github: "https://github.com/Delfred237/docu-sphere",
       demo: "",
     },
   },
@@ -127,7 +127,7 @@ export const PROJECTS: CaseStudy[] = [
       "Architecture client-serveur avec une API REST Spring Boot comme couche centrale. React et Flutter consomment le même contrat d'API et partagent les mêmes règles métier et de sécurité.",
 
     links: {
-      github: "",
+      github: "https://github.com/Delfred237/nexustasks",
       demo: "",
     },
   },
@@ -171,7 +171,7 @@ export const PROJECTS: CaseStudy[] = [
       "Architecture Java native organisée autour d'un système de producteurs et de workers chargés de traiter les tâches de manière concurrente, avec mécanismes de timeout, retry et suivi des traitements.",
 
     links: {
-      github: "",
+      github: "https://github.com/Delfred237/taskforge",
     },
   },
 
@@ -203,7 +203,7 @@ export const PROJECTS: CaseStudy[] = [
       "Application Java structurée en modules métier avec séparation des responsabilités, tests unitaires et automatisation du build et des vérifications via GitHub Actions.",
 
     links: {
-      github: "",
+      github: "https://github.com/Delfred237/finledger",
     },
   },
 
@@ -234,7 +234,7 @@ export const PROJECTS: CaseStudy[] = [
       "Architecture Java orientée objet avec séparation des responsabilités entre les modèles métier, les services et les mécanismes de gestion des réservations.",
 
     links: {
-      github: "",
+      github: "https://github.com/Delfred237/eventflow",
     },
   },
 
