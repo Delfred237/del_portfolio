@@ -19,7 +19,7 @@ export interface CaseStudy {
     | "Abandonné";
 
   featured: boolean;
-  highlight: string;
+  metrics: string;
 
   description: string;
   tags: string[];
@@ -44,7 +44,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Fullstack",
     status: "Production",
     featured: true,
-    highlight: "Spring Boot + React + JWT + RBAC + CI/CD",
+    metrics: "Spring Boot + React + JWT + RBAC + CI/CD",
 
     description:
       "Application Full Stack conçue pour centraliser la gestion des documents, des utilisateurs et des processus associés. Le projet met l'accent sur la sécurité, la structuration du backend, la gestion des fichiers et les pratiques d'ingénierie logicielle.",
@@ -92,7 +92,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Fullstack",
     status: "Production",
     featured: true,
-    highlight: "1 API · React · Flutter · Spring Boot",
+    metrics: "1 API · React · Flutter · Spring Boot",
 
     description:
       "Plateforme de gestion de tâches construite autour d'une API Spring Boot consommée simultanément par une application Web React et une application mobile Flutter. Le projet démontre la conception d'un backend partagé entre plusieurs clients.",
@@ -139,7 +139,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Backend",
     status: "Production",
     featured: true,
-    highlight: "Java natif · Concurrency · Worker Pools",
+    metrics: "Java natif · Concurrency · Worker Pools",
 
     description:
       "Système de traitement de tâches développé en Java sans framework applicatif. Le projet explore les mécanismes fondamentaux nécessaires à la construction d'un système de traitement concurrent et résilient.",
@@ -182,7 +182,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Backend",
     status: "Production",
     featured: true,
-    highlight: "Java 21 · JUnit 5 · Docker · GitHub Actions",
+    metrics: "Java 21 · JUnit 5 · Docker · GitHub Actions",
 
     description:
       "Application de gestion budgétaire développée en Java natif afin de renforcer les fondamentaux du langage, la structuration d'une application et les pratiques de qualité logicielle.",
@@ -214,7 +214,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Backend",
     status: "Production",
     featured: true,
-    highlight: "Java natif · Business Logic · OOP",
+    metrics: "Java natif · Business Logic · OOP",
 
     description:
       "Application Java dédiée à la gestion d'événements, de réservations et de billets. Le projet met l'accent sur la modélisation métier et les fondamentaux de la programmation orientée objet.",
@@ -249,7 +249,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Fullstack",
     status: "En développement",
     featured: true,
-    highlight: "Spring Boot · PostgreSQL · JWT · OAuth2",
+    metrics: "Spring Boot · PostgreSQL · JWT · OAuth2",
 
     description:
       "Plateforme SaaS destinée aux agences de location de véhicules. Le système vise à centraliser la gestion des agences, des véhicules, des clients, des réservations et des opérations associées.",
@@ -288,7 +288,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Mobile",
     status: "En développement",
     featured: true,
-    highlight: "Flutter · Riverpod · Drift · Offline-first",
+    metrics: "Flutter · Riverpod · Drift · Offline-first",
 
     description:
       "Application mobile Flutter conçue pour permettre aux utilisateurs de suivre leurs revenus, leurs dépenses et leurs budgets avec un fonctionnement principalement hors ligne.",
@@ -324,7 +324,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Fullstack",
     status: "Prototype",
     featured: false,
-    highlight: "Django · PostgreSQL · PDF · Docker",
+    metrics: "Django · PostgreSQL · PDF · Docker",
 
     description:
       "Application Django permettant de gérer les demandes de devis, de générer automatiquement des documents PDF et de suivre leur progression depuis un tableau de bord.",
@@ -356,7 +356,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Backend",
     status: "Production",
     featured: false,
-    highlight: "FastAPI · JWT · OAuth2 · PostgreSQL",
+    metrics: "FastAPI · JWT · OAuth2 · PostgreSQL",
 
     description:
       "API REST développée avec FastAPI pour gérer des équipements, des utilisateurs et leurs droits d'accès, avec authentification JWT, OAuth2 et documentation interactive.",
@@ -401,7 +401,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Frontend",
     status: "Production",
     featured: false,
-    highlight: "Projet client livré",
+    metrics: "Projet client livré",
 
     description:
       "Site web professionnel développé pour une entreprise basée au Royaume-Uni, avec une attention particulière portée à l'identité visuelle, au responsive design, aux performances et à l'expérience utilisateur.",
@@ -431,7 +431,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Frontend",
     status: "Prototype",
     featured: false,
-    highlight: "JavaScript Vanilla · ES Modules · Local Storage",
+    metrics: "JavaScript Vanilla · ES Modules · Local Storage",
 
     description:
       "Application de gestion de tâches inspirée des outils Kanban, développée sans framework JavaScript afin de travailler les fondamentaux du langage, la modularité et la manipulation du DOM.",
@@ -464,7 +464,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Frontend",
     status: "En développement",
     featured: false,
-    highlight: "React · TypeScript · Tailwind CSS · Framer Motion",
+    metrics: "React · TypeScript · Tailwind CSS · Framer Motion",
 
     description:
       "Portfolio personnel conçu pour présenter mon parcours, mes projets et mes compétences à travers des études de cas détaillées et une interface moderne.",
@@ -497,7 +497,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Fullstack",
     status: "Apprentissage",
     featured: false,
-    highlight: "Django · CRUD · Authentication",
+    metrics: "Django · CRUD · Authentication",
 
     description:
       "Application de blog développée dans le cadre de l'apprentissage de Django et de ses principaux mécanismes de développement web.",
@@ -527,7 +527,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Frontend",
     status: "Production",
     featured: false,
-    highlight: "JavaScript · DOM · Game State",
+    metrics: "JavaScript · DOM · Game State",
 
     description:
       "Implémentation du Pig Dice Game en JavaScript Vanilla, réalisée pour travailler la gestion d'état, les événements, le DOM et l'expérience utilisateur.",
@@ -559,7 +559,7 @@ export const PROJECTS: CaseStudy[] = [
     category: "Frontend",
     status: "Production",
     featured: false,
-    highlight: "JavaScript · Local Storage · DOM",
+    metrics: "JavaScript · Local Storage · DOM",
 
     description:
       "Jeu de devinette développé en JavaScript Vanilla pour pratiquer la manipulation du DOM, la gestion des événements, la persistance locale et les interactions utilisateur.",
